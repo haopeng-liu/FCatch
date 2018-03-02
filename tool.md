@@ -11,6 +11,18 @@ layout: default
 
 > TOF bugs = A problem of **Timing** + **Unexpected** states **shared** among nodes
 
+# [](#header-1)FCatch detection flow
+![](./fcatch-flow.svg)
+
+{::comment}
+graph LR
+A[Observe correct runs] -|-> B(Logs)
+B -|-> C[Identify conflicting ops]
+C -|-> D(TOF bug candidates)
+D -|-> E[Identify fault-intolerant ops]
+E -|-> F(Reports)
+{:/comment}
+
 # [](#header-1)True TOF bugs found by FCatch
 The details of all the ture TOF bugs found by FCatch can be accessed in 3 ways:
 * Read the document in [Github](https://github.com/haopeng-liu/TOF-bugs)
