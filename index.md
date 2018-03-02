@@ -13,7 +13,6 @@ layout: default
   * Error: the crashing attempt's ID was recorded in a heap object as the commiting attempt.
   * Failure: all relaunched task attempts cannot commit and the job fails (hang).
 
-[^1]: message loss or node crashes ([How common are they?](./chart.jpg)).
 ---
 
 # [](#header-1)What is FCatch?
@@ -36,6 +35,7 @@ We are working on providing better solutions to make software systems more relia
 ```
 
 ---
+[^1]: message loss or node crashes ([How common are they?](./chart.jpg)).
 
 <!---
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
