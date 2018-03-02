@@ -2,16 +2,42 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](another-page).
+# [](#header-1)What are Time-of-Fault (TOF) bugs?
+* Three compositions:
+  * Trigger: a special **timing** of fault [^1].
+  * Error: **unexpected** state left due to the untimly fault.
+  * Failure: system **cannot properly** handle such unexpected state.
+* A real example: [MR-3858](https://issues.apache.org/jira/browse/MAPREDUCE-3858)
+  * Trigger: bug happens only when a task attempt crashes in the middle of commiting.
+  * Error: the crashing attempt's ID was recorded in a heap object as the commiting attempt.
+  * Failure: all relaunched task attempts cannot commit and the job fails (hang).
 
-There should be whitespace between paragraphs.
+[^1]: message loss or node crashes ([How common are they?](./chart.jpg)).
+---
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+# [](#header-1)What is FCatch?
+FCatch is an ongoing research project aiming at fighting TOF bugs in cloud systems. Currently, it contains:
+*     A [TOF bug model](model) and a [TOF bug benchmark suite](https://goo.gl/forms/qbGVz4bt8DFpU6F33).
+*     A [detection tool](tool) to **automatically** predict TOF bugs from **correct runs** with low false postive rate. 
 
-# [](#header-1)Header 1
+We are working on providing better solutions to make software systems more reliabile, especially for distributed and cloud systems.
 
+---
+
+# [](#header-1)Publications
+*     [FCatch: Automatically detecting time-of-fault bugs in cloud systems.](http://people.cs.uchicago.edu/~shanlu/paper/asplos18_fcatch.pdf) Haopeng Liu, Xu Wang, Guangpu Li, Shan Lu, Feng Ye and Chen Tian, _ASPLOS'18_
+```
+@inproceedings{liu2018fcatch,
+  title={FCatch: Automatically Detecting Time-of-fault Bugs in Cloud Systems},
+  author={Liu, Haopeng and Wang, Xu and Li, Guangpu and Lu, Shan and Ye, Feng and Tian, Chen},
+  booktitle={Proceedings of the 23rd International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS'18)},
+}
+```
+
+---
+
+<!---
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
 ## [](#header-2)Header 2
@@ -121,3 +147,4 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 ```
 The final element.
 ```
+--->

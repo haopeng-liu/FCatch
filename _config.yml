@@ -1,5 +1,6 @@
 title: FCatch
-description: FCatch is a clean, responsive theme for GitHub Pages.
+description: Modeling and finding time-of-fault bugs in your cloud system
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
+markdown: kramdown
