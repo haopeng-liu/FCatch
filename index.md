@@ -16,9 +16,9 @@ layout: default
 ---
 
 # [](#header-1)What is FCatch?
-FCatch is an ongoing research project aiming at fighting TOF bugs in cloud systems. Currently, it contains:
+FCatch is a research project aiming at fighting TOF bugs in cloud systems. Currently, it contains:
 *     A [TOF bug model](model) and a [TOF bug benchmark suite](https://goo.gl/forms/qbGVz4bt8DFpU6F33).
-*     A [detection tool](tool) to **automatically** predict TOF bugs from **correct runs** with low false postive rate. 
+*     A [tool](tool) to **automatically** predict TOF bugs from **correct runs** with low false postive rate. 
 
 We are working on providing better solutions to make software systems more reliabile, especially for distributed and cloud systems.
 
