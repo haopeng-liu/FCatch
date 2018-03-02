@@ -23,15 +23,15 @@ TOF, a nondeterminism culprit, introduces new define-use relations between _W_ a
     * _R_<sub>Regular</sub> happens-before _W_<sub>Crash</sub>? :worried:
     * _W_<sub>Crash</sub> happens-before _R_<sub>Regular</sub>? :yum:
     * _W_<sub>Crash</sub> concurrent with _R_<sub>Regular</sub>? :worried:
-
 ![](./crash-regular.png)
+* Fault-tolerant mechanism: timeout
 
 ---
 
 # [](#header-1)Crash-recovery TOF bugs
 *  The content consumed by _R_<sub>Recovery</sub> is **completely** determined by TOF.
-
 ![](./crash-recovery.png)
+* Fault-tolerance mechanisms: sanity check and data overwrite
 
 ---
 [^1]: "from" means _W_/_R_ physically executes on the node **or** casually initiated by the node.
