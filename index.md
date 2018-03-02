@@ -6,11 +6,11 @@ layout: default
 # [](#header-1)What are Time-of-Fault (TOF) bugs?
 * Three compositions:
   * Trigger: a special **timing** of fault [^1].
-  * Error: **unexpected** state left due to the untimly fault.
+  * Error: **unexpected** state left due to the untimely fault.
   * Failure: system **cannot properly** handle such unexpected state.
 * A real example: [MR-3858](https://issues.apache.org/jira/browse/MAPREDUCE-3858)
-  * Trigger: bug happens only when a task attempt crashes in the middle of commiting.
-  * Error: the crashing attempt's ID was recorded in a heap object as the commiting attempt.
+  * Trigger: bug happens only when a task attempt crashes in the middle of committing.
+  * Error: the crashing attempt's ID was recorded in a heap object as the committing attempt.
   * Failure: all relaunched task attempts cannot commit and the job fails (hang).
 
 ---
@@ -18,9 +18,9 @@ layout: default
 # [](#header-1)What is FCatch?
 FCatch is a research project aiming at fighting TOF bugs in cloud systems. Currently, it contains:
 *     A [TOF bug model](model) and a [TOF bug benchmark suite](https://goo.gl/forms/qbGVz4bt8DFpU6F33).
-*     A [tool](tool) to **automatically** predict TOF bugs from **correct runs** with low false postive rate. 
+*     A [tool](tool) to **automatically** predict TOF bugs from **correct runs** with low false positive rate. 
 
-We are working on providing better solutions to make software systems more reliabile, especially for distributed and cloud systems.
+We are working on providing better solutions to make software systems more reliable, especially for distributed and cloud systems.
 
 ---
 

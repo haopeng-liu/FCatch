@@ -24,7 +24,7 @@ E -|-> F(Reports)
 {:/comment}
 
 # [](#header-1)True TOF bugs found by FCatch
-The details of all the ture TOF bugs found by FCatch can be accessed in 3 ways:
+The details of all the true TOF bugs found by FCatch can be accessed in 3 ways:
 * Read the document in [Github](https://github.com/haopeng-liu/TOF-bugs)
 
 * Remotely access the VM and reproduce each bug
